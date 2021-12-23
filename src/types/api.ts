@@ -61,6 +61,15 @@ export type SectionConceptsProps = {
   }[]
 }
 
+export type SectionModulesProps = {
+  title: string
+  modules: {
+    title: string
+    subtitle: string
+    description: string
+  }[]
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
@@ -69,6 +78,7 @@ export type LandingPageProps = {
       sectionAboutProject: SectionAboutProjectProps
       sectionTech: SectionTechProps
       sectionConcepts: SectionConceptsProps
+      sectionModules: SectionModulesProps
     }
   }
 }
