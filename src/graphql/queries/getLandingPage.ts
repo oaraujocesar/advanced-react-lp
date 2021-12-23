@@ -61,6 +61,15 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionConcepts on LandingPage {
+    sectionConcepts {
+      title
+      concepts(pagination: { limit: 20 }) {
+        title
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
@@ -69,6 +78,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...header
           ...sectionAboutProject
           ...sectionTech
+          ...sectionConcepts
         }
       }
     }
