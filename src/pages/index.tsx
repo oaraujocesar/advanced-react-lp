@@ -21,7 +21,7 @@ import JsonSchema from 'components/JsonSchema'
 const Index = ({ data: { attributes } }: LandingPageProps) => (
   <>
     <SectionHero logo={attributes.logo} header={attributes.header} />
-    <SectionAboutProject />
+    <SectionAboutProject {...attributes.sectionAboutProject} />
     <SectionTech />
     <SectionConcepts />
     <SectionModules />
@@ -37,8 +37,6 @@ const Index = ({ data: { attributes } }: LandingPageProps) => (
 
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE)
-
-  console.log('@GQL', landingPage.data.attributes)
 
   return {
     props: {
