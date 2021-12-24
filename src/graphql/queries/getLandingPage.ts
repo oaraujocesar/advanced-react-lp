@@ -128,6 +128,24 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews(pagination: { limit: 20 }) {
+        name
+        text
+        photo {
+          data {
+            attributes {
+              alternativeText
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
@@ -141,6 +159,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...sectionAgenda
           ...pricingBox
           ...sectionAboutUs
+          ...sectionReviews
         }
       }
     }

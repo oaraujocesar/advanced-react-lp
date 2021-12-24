@@ -28,7 +28,7 @@ const Index = ({ data: { attributes } }: LandingPageProps) => (
     <SectionAgenda {...attributes.sectionAgenda} />
     <PricingBox {...attributes.pricingBox} />
     <SectionAboutUs {...attributes.sectionAboutUs} />
-    <SectionReviews />
+    <SectionReviews {...attributes.sectionReviews} />
     <SectionFaq />
     <Footer />
     <JsonSchema />

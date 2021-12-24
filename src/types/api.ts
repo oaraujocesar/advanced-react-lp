@@ -117,6 +117,15 @@ export type SectionAboutUsProps = {
   }
 }
 
+export type SectionReviewsProps = {
+  title: string
+  reviews: {
+    name: string
+    text: string
+    photo: Photo
+  }[]
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
@@ -129,6 +138,7 @@ export type LandingPageProps = {
       sectionAgenda: SectionAgendaProps
       pricingBox: PricingBoxProps
       sectionAboutUs: SectionAboutUsProps
+      sectionReviews: SectionReviewsProps
     }
   }
 }
