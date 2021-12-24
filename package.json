@@ -35,6 +35,7 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.16.5",
     "graphql": "^16.2.0",
     "graphql-request": "^3.7.0",
     "imagemin-mozjpeg": "^9.0.0",
