@@ -29,7 +29,7 @@ const Index = ({ data: { attributes } }: LandingPageProps) => (
     <PricingBox {...attributes.pricingBox} />
     <SectionAboutUs {...attributes.sectionAboutUs} />
     <SectionReviews {...attributes.sectionReviews} />
-    <SectionFaq />
+    <SectionFaq {...attributes.sectionFaq} />
     <Footer />
     <JsonSchema />
   </>

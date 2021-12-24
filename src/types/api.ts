@@ -25,6 +25,17 @@ export type Photo = {
   }
 }
 
+export type Review = {
+  name: string
+  text: string
+  photo: Photo
+}
+
+export type Question = {
+  question: string
+  answer: string
+}
+
 export type SocialLinks = {
   title: string
   url: string
@@ -119,11 +130,12 @@ export type SectionAboutUsProps = {
 
 export type SectionReviewsProps = {
   title: string
-  reviews: {
-    name: string
-    text: string
-    photo: Photo
-  }[]
+  reviews: Review[]
+}
+
+export type SectionFaqProps = {
+  title: string
+  questions: Question[]
 }
 
 export type LandingPageProps = {
@@ -139,6 +151,7 @@ export type LandingPageProps = {
       pricingBox: PricingBoxProps
       sectionAboutUs: SectionAboutUsProps
       sectionReviews: SectionReviewsProps
+      sectionFaq: SectionFaqProps
     }
   }
 }

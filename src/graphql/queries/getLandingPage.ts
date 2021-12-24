@@ -146,6 +146,16 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionFaq on LandingPage {
+    sectionFaq {
+      title
+      questions(pagination: { limit: 20 }) {
+        question
+        answer
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
@@ -160,6 +170,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...pricingBox
           ...sectionAboutUs
           ...sectionReviews
+          ...sectionFaq
         }
       }
     }
