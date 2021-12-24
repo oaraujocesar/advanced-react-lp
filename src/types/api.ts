@@ -16,6 +16,20 @@ export type Module = {
   description: string
 }
 
+export type Photo = {
+  data: {
+    attributes: {
+      alternativeText: string
+      url: string
+    }
+  }
+}
+
+export type SocialLinks = {
+  title: string
+  url: string
+}[]
+
 export type LogoProps = {
   data: {
     attributes: {
@@ -88,6 +102,21 @@ export type PricingBoxProps = {
   }
 }
 
+export type SectionAboutUsProps = {
+  title: string
+  authors: {
+    data: {
+      attributes: {
+        photo: Photo
+        name: string
+        role: string
+        description: string
+        socialLinks: SocialLinks
+      }
+    }[]
+  }
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
@@ -99,6 +128,7 @@ export type LandingPageProps = {
       sectionModules: SectionModulesProps
       sectionAgenda: SectionAgendaProps
       pricingBox: PricingBoxProps
+      sectionAboutUs: SectionAboutUsProps
     }
   }
 }

@@ -27,7 +27,7 @@ const Index = ({ data: { attributes } }: LandingPageProps) => (
     <SectionModules {...attributes.sectionModules} />
     <SectionAgenda {...attributes.sectionAgenda} />
     <PricingBox {...attributes.pricingBox} />
-    <SectionAboutUs />
+    <SectionAboutUs {...attributes.sectionAboutUs} />
     <SectionReviews />
     <SectionFaq />
     <Footer />
